@@ -1,0 +1,178 @@
+<section>
+<section id="информация" class="title-slide slide level1">
+<h1>Информация</h1>
+
+</section>
+<section id="докладчик" class="slide level2">
+<h2>Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Николаева Ангелина Борисовна</li>
+<li>Студентка НКАбд-04-25</li>
+<li>Российский университет дружбы народов</li>
+<li>[1032253612@rudn.ru]</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="./image/angelina.png" /></p>
+</div>
+</div>
+</section></section>
+<section id="цель-работы" class="title-slide slide level1">
+<h1>Цель работы</h1>
+<ul>
+<li>приобретение практических навыков установки операционной системы на
+виртуальную машину</li>
+<li>настройки минимально необходимых для дальнейшей работы сервисов</li>
+</ul>
+</section>
+
+<section id="задание" class="title-slide slide level1">
+<h1>Задание</h1>
+<ul>
+<li>освоить базовые команды терминала Linux</li>
+<li>получить системную информацию.</li>
+</ul>
+</section>
+
+<section>
+<section id="выполнение-лабораторной-работы"
+class="title-slide slide level1">
+<h1>Выполнение лабораторной работы</h1>
+
+</section>
+<section id="создание-виртуальной-машины" class="slide level2">
+<h2>Создание виртуальной машины</h2>
+<p>Создала новую виртуальную машину в графическом интерфейсе и указала
+имя виртуальной машины, соответствующее моему логину в дисплейном
+классе.<br />
+Указала размер основной памяти виртуальной машины — 4096 МБ.<br />
+Задала конфигурацию жёсткого диска — загрузочный, VDI.<br />
+Задала размер диска — 80 ГБ.</p>
+<figure id="fig-001">
+<img data-src="image/1.png" style="width:50.0%"
+alt="Создание новой виртуальной машины в графическом интерфейсе" />
+<figcaption aria-hidden="true">Создание новой виртуальной машины в
+графическом интерфейсе</figcaption>
+</figure>
+</section>
+<section id="подключение-образа" class="slide level2">
+<h2>Подключение образа</h2>
+<p>Добавила новый привод оптических дисков и выбрала образ.</p>
+<figure id="fig-002">
+<img data-src="image/2.png" style="width:50.0%" alt="Выбранный образ" />
+<figcaption aria-hidden="true">Выбранный образ</figcaption>
+</figure>
+</section>
+<section id="обновление-пакетов" class="slide level2">
+<h2>Обновление пакетов</h2>
+<p>Обновила все пакеты и установила программу для удобства работы в
+консоли.</p>
+<figure id="fig-003">
+<img data-src="image/3.png" style="width:50.0%"
+alt="Обновление всех пакетов" />
+<figcaption aria-hidden="true">Обновление всех пакетов</figcaption>
+</figure>
+</section>
+<section id="отключение-selinux-и-настройка-обновлений"
+class="slide level2">
+<h2>Отключение SELinux и настройка обновлений</h2>
+<p>Отключила систему безопасности SELinux.</p>
+<figure id="fig-005">
+<img data-src="image/5.png" style="width:50.0%"
+alt="Установка автоматического обновления" />
+<figcaption aria-hidden="true">Установка автоматического
+обновления</figcaption>
+</figure>
+</section>
+<section id="настройка-клавиатуры-sway" class="slide level2">
+<h2>Настройка клавиатуры (Sway)</h2>
+<p>Запустила терминальный мультиплексор <code>tmux</code> и создала
+конфигурационный файл
+<code>~/.config/sway/config.d/95-system-keyboard-config.conf</code>.<br />
+Отредактировала конфигурационный файл.</p>
+<figure id="fig-004">
+<img data-src="image/4.png" style="width:50.0%"
+alt="Отредактированный конфигурационный файл" />
+<figcaption aria-hidden="true">Отредактированный конфигурационный
+файл</figcaption>
+</figure>
+</section>
+<section id="настройка-имени-хоста-и-группы" class="slide level2">
+<h2>Настройка имени хоста и группы</h2>
+<p>Установила имя хоста, добавила своего пользователя в группу
+<code>vboxsf</code>.</p>
+<figure id="fig-006">
+<img data-src="image/6.png" style="width:70.0%"
+alt="Установка имени хоста" />
+<figcaption aria-hidden="true">Установка имени хоста</figcaption>
+</figure>
+</section>
+<section id="установка-pandoc" class="slide level2">
+<h2>Установка pandoc</h2>
+<p>Запустила терминальный мультиплексор <code>tmux</code>, переключилась
+на роль супер-пользователя и установила средство <code>pandoc</code> для
+работы с языком разметки Markdown.</p>
+<figure id="fig-007">
+<img data-src="image/7.png" style="width:60.0%"
+alt="Запуск tmux и установка pandoc" />
+<figcaption aria-hidden="true">Запуск tmux и установка
+pandoc</figcaption>
+</figure>
+</section>
+<section id="установка-texlive" class="slide level2">
+<h2>Установка TeXlive</h2>
+<p>Установила дистрибутив TeXlive.</p>
+<figure id="fig-008">
+<img data-src="image/8.png" style="width:60.0%"
+alt="Установка TeXlive" />
+<figcaption aria-hidden="true">Установка TeXlive</figcaption>
+</figure>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="домашнее-задание" class="title-slide slide level1">
+<h1>Домашнее задание</h1>
+
+</section>
+<section id="версия-ядра-linux" class="slide level2">
+<h2>Версия ядра Linux</h2>
+<p>Получила версию ядра Linux.</p>
+</section>
+<section id="частота-и-модель-процессора" class="slide level2">
+<h2>Частота и модель процессора</h2>
+<p>Получила частоту процессора и модель процессора.</p>
+<figure id="fig-009">
+<img data-src="image/9.png" style="width:70.0%"
+alt="Получение модели процессора" />
+<figcaption aria-hidden="true">Получение модели процессора</figcaption>
+</figure>
+</section>
+<section id="объём-оперативной-памяти" class="slide level2">
+<h2>Объём оперативной памяти</h2>
+<p>Получила объём доступной оперативной памяти.</p>
+<figure id="fig-010">
+<img data-src="image/10.png" style="width:70.0%"
+alt="Получение объёма доступной оперативной памяти" />
+<figcaption aria-hidden="true">Получение объёма доступной оперативной
+памяти</figcaption>
+</figure>
+</section>
+<section id="гипервизор-и-монтирование" class="slide level2">
+<h2>Гипервизор и монтирование</h2>
+<p>Получила тип обнаруженного гипервизора и последовательность
+монтирования файловых систем.</p>
+<figure id="fig-011">
+<img data-src="image/11.png" style="width:70.0%"
+alt="Получение последовательности монтирования файловых систем" />
+<figcaption aria-hidden="true">Получение последовательности монтирования
+файловых систем</figcaption>
+</figure>
+</section></section>
+<section id="выводы" class="title-slide slide level1">
+<h1>Выводы</h1>
+<p>В ходе работы были освоены базовые приёмы работы в терминале Linux и
+оформления результа.</p>
+</section>
