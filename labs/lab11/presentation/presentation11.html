@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Николаева А. Б.">
+  <title>Лабораторная работа №11</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/metropolis.css" id="theme">
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Лабораторная работа №11</h1>
+  <p class="subtitle">Операционные системы</p>
+  <p class="author">Николаева А. Б.</p>
+  <p class="institute">Российский университет дружбы народов, Москва,
+Россия</p>
+  <p class="date">20 июня 2026</p>
+</section>
+
+<section id="информация" class="slide level1">
+<h1>Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Николаева Ангелина Борисовна</li>
+<li>Студентка НКАбд-04-25</li>
+<li>Российский университет дружбы народов</li>
+<li>[1032253612@rudn.ru]</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="./image/angelina.png" /></p>
+</div>
+</div>
+</section>
+<section id="цель-работы" class="slide level1">
+<h1>Цель работы</h1>
+<ul>
+<li>познакомиться с операционной системой Linux</li>
+<li>получить практические навыки работы с редактором Emacs</li>
+</ul>
+</section>
+<section id="выполнение-лабораторной-работы" class="slide level1">
+<h1>Выполнение лабораторной работы</h1>
+<ol type="1">
+<li>Откроем Emacs.</li>
+</ol>
+<figure>
+<img data-src="image/1.png" alt="Запуск Emacs" />
+<figcaption aria-hidden="true">Запуск Emacs</figcaption>
+</figure>
+<h2 id="section"></h2>
+<ol start="2" type="1">
+<li>Создадим файл lab11.sh с помощью комбинации Ctrl-x Ctrl-f и наберем
+текст из задания в ново созданный файл.</li>
+</ol>
+<figure>
+<img data-src="image/2.png" alt="Новый файл" />
+<figcaption aria-hidden="true">Новый файл</figcaption>
+</figure>
+<h2 id="section-1"></h2>
+<ol start="3" type="1">
+<li>Сохраним файл с помощью комбинации Ctrl-x s. Проделаем с текстом
+стандартные процедуры редактирования, каждое действие осуществляется
+комбинациями клавиш. Вырежем командой Ctrl-w. целую строку. Вставим эту
+строку в конец файла командой Ctrl-y.</li>
+</ol>
+<figure>
+<img data-src="image/3.png" alt="Операция вставка" />
+<figcaption aria-hidden="true">Операция вставка</figcaption>
+</figure>
+<h2 id="section-2"></h2>
+<ol start="4" type="1">
+<li>Выделим область текста командой Ctrl-space.</li>
+</ol>
+<figure>
+<img data-src="image/4.png" alt="Выделение блока" />
+<figcaption aria-hidden="true">Выделение блока</figcaption>
+</figure>
+<h2 id="section-3"></h2>
+<ol start="5" type="1">
+<li>Скопируем область в буфер обмена командой alt-w. Вставим область в
+конец файла.</li>
+</ol>
+<figure>
+<img data-src="image/5.png" alt="Копирование блока" />
+<figcaption aria-hidden="true">Копирование блока</figcaption>
+</figure>
+<h2 id="section-4"></h2>
+<ol start="6" type="1">
+<li>Вновь выделим эту область и на этот раз вырежем её командой
+Ctrl-w.</li>
+</ol>
+<figure>
+<img data-src="image/6.png" alt="Удаление блока" />
+<figcaption aria-hidden="true">Удаление блока</figcaption>
+</figure>
+<h2 id="section-5"></h2>
+<ol start="7" type="1">
+<li><p>Отменим последнее действие командой Ctrl-x u.</p></li>
+<li><p>Научимся использовать команды по перемещению курсора.</p></li>
+</ol>
+<ul>
+<li><p>Переместим курсор в начало строки командой Ctrl-a.</p></li>
+<li><p>Переместим курсор в курсор строки командой Ctrl-e.</p></li>
+<li><p>Переместим курсор в начало буфера Alt-&lt;.</p></li>
+<li><p>Переместим курсор в конец буфера Alt-&gt;.</p></li>
+</ul>
+<ol start="9" type="1">
+<li>Управление буферами. Введем Ctrl-x 2.</li>
+</ol>
+<h2 id="section-6"></h2>
+<ol start="10" type="1">
+<li>Переместим вновь открытое окно Ctrl-x со списком открытых буферов и
+переключимся на другой буфер.</li>
+</ol>
+<figure>
+<img data-src="image/7.png" alt="Переключение буфера" />
+<figcaption aria-hidden="true">Переключение буфера</figcaption>
+</figure>
+<h2 id="section-7"></h2>
+<ol start="11" type="1">
+<li>Закроем это окно командой Ctrl-x 0.</li>
+</ol>
+<figure>
+<img data-src="image/8.png" alt="Закроем буфер" />
+<figcaption aria-hidden="true">Закроем буфер</figcaption>
+</figure>
+<h2 id="section-8"></h2>
+<ol start="12" type="1">
+<li><p>Теперь вновь переключимся между буферами, но уже без вывода их
+списка на экран Ctrl-x b.</p></li>
+<li><p>Поделим фрейм на 2 части: разделитм фрейм на два окна по
+вертикали Ctrl-x 3, а затем каждое из этих окон на две части по
+горизонтали Ctrl-x 2. В каждом из четырёх созданных окон откроем новый
+буфер (файл).</p></li>
+</ol>
+<figure>
+<img data-src="image/9.png" alt="Два буфера" />
+<figcaption aria-hidden="true">Два буфера</figcaption>
+</figure>
+<h2 id="section-9"></h2>
+<ol start="14" type="1">
+<li>Переключимся в режим поиска Ctrl-s и найдем несколько слов,
+присутствующих в тексте. Выйдем из режима поиска, нажав Ctrl-g. Перейдем
+в режим поиска и замены Alt-Shift %, введем текст, который следует найти
+и заменить, для замены нажмем Enter. После этого нажмем ! для
+подтверждения замены. Если мы хотим заменить конкретные слова то мы их
+выделяем и нажимаем Enter. Если все то !</li>
+</ol>
+<h2 id="section-10"></h2>
+<p>Испробуем другой режим поиска, нажав Alt-s .</p>
+<figure>
+<img data-src="image/10.png" alt="Режим поиска" />
+<figcaption aria-hidden="true">Режим поиска</figcaption>
+</figure>
+</section>
+<section id="выводы" class="slide level1">
+<h1>Выводы</h1>
+<p>В данной работе мы познакомились с еще одним редактором операционной
+системой Linux. Получили практические навыки работы с редактором
+Emacs.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^5/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
