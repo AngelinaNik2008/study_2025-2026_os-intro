@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Николаева А. Б.">
+  <title>Лабораторная работа №12</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/metropolis.css" id="theme">
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Лабораторная работа №12</h1>
+  <p class="subtitle">Операционные системы</p>
+  <p class="author">Николаева А. Б.</p>
+  <p class="institute">Российский университет дружбы народов, Москва,
+Россия</p>
+  <p class="date">20 июня 2026</p>
+</section>
+
+<section id="информация" class="slide level1">
+<h1>Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Николаева Ангелина Борисовна</li>
+<li>Студентка НКАбд-04-25</li>
+<li>Российский университет дружбы народов</li>
+<li>[1032253612@rudn.ru]</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="./image/angelina.png" /></p>
+</div>
+</div>
+</section>
+<section id="цель-работы" class="slide level1">
+<h1>Цель работы</h1>
+<ul>
+<li>изучить основы программирования в оболочке ОС UNIX/Linux</li>
+<li>научиться писать небольшие командные файлы</li>
+</ul>
+</section>
+<section id="выполнение-лабораторной-работы" class="slide level1">
+<h1>Выполнение лабораторной работы</h1>
+<ol type="1">
+<li>Написали скрипт, который при запуске делает резервную копию самого
+себя (то есть файла, в котором содержится его исходный код) в другую
+директорию backup в моём домашнем каталоге. При этом файл архивируется
+одним из архиваторов на выбор zip , bzip2 или tar . Способ использования
+команд архивации узнали, изучив справку.</li>
+</ol>
+<h2 id="section"></h2>
+<p>Комментарий: командой cp копируем файл в директорию ~/backup/, а
+командой gzip исходный файл архивируется и удаляется (остаётся только
+архив).</p>
+<figure>
+<img data-src="image/1.png" alt="Задание 1" />
+<figcaption aria-hidden="true">Задание 1</figcaption>
+</figure>
+<h2 id="section-1"></h2>
+<ol start="2" type="1">
+<li>Написали пример командного файла, обрабатывающего любое произвольное
+число аргументов командной строки, в том числе превышающее десять.
+Например, скрипт может последовательно распечатывать значения всех
+переданных аргументов</li>
+</ol>
+<pre><code>for i — для всех переданных аргументов
+    do echo $1 — выводим первый аргумент
+       shift — удаляем первый аргумент, смещаем все аргументы
+done — конец цикла</code></pre>
+<h2 id="section-2"></h2>
+<figure>
+<img data-src="image/2.png" alt="Задание 2" />
+<figcaption aria-hidden="true">Задание 2</figcaption>
+</figure>
+<h2 id="section-3"></h2>
+<ol start="3" type="1">
+<li>Написали командный файл — аналог команды ls (без использования самой
+этой команды и команды dir ). Он выдает информацию о нужном каталоге и
+выводит информацию о возможностях доступа к файлам этого каталога.</li>
+</ol>
+<p>Если не использовать команду ls или команду dir, то данную задачу
+легко выполнить с помощью команды find, если указать ей опцию поиска
+файлов с определенным правом доступа</p>
+<h2 id="section-4"></h2>
+<figure>
+<img data-src="image/3.png" alt="Задание 3" />
+<figcaption aria-hidden="true">Задание 3</figcaption>
+</figure>
+<h2 id="section-5"></h2>
+<ol start="4" type="1">
+<li>Написали командный файл, который получает в качестве аргумента
+командной строки формат файла ( .txt , .doc , .jpg , .pdf и т.д.) и
+вычисляет количество таких файлов в указанной директории. Путь к
+директории также передаётся в виде аргумента командной строки.</li>
+</ol>
+<p>Ищем командой find в каталоге $1 (первый аргумент) файлы
+заканчивающиеся “*” на нужное расширение $2 (аргумент второй) передаем
+вывод | в команду подсчета wc с аргументом считающим слова -l</p>
+<h2 id="section-6"></h2>
+<figure>
+<img data-src="image/4.png" alt="Задание 4" />
+<figcaption aria-hidden="true">Задание 4</figcaption>
+</figure>
+</section>
+<section id="выводы" class="slide level1">
+<h1>Выводы</h1>
+<p>В данной работе мы изучили основы программирования в оболочке ОС
+UNIX/Linux. Научились писать небольшие командные файлы и скрипты на
+языке bush.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^5/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
